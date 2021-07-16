@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import BarChart from './MyComponents/chart';
+import Header from "./MyComponents/Header";
+import { Footer } from "./MyComponents/Footer";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import { Filterer } from './MyComponents/Filterer';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <BarChart/>
+      <Filterer/>
+      <Footer/>
     </div>
-  );
+  )
 }
-
 export default App;
